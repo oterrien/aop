@@ -1,18 +1,28 @@
 package com.ote.test;
 
 
-/**
- * Created by Olivier on 05/06/2016.
- */
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
 public class Application {
 
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
 
-    public static void main(String... args) {
-        System.out.println(new Foo().power(2, 4));
+    @Bean
+    CommandLineRunner dummyCLR() {
 
-        User user = new User();
-        user.setLogin("toto");
-        user.setPassword("toto");
-        System.out.println(user.toString());
+        return args -> {
+
+            Foo foo = new Foo();
+            System.out.println(foo.power(2, 4));
+
+            foo.setBar("toto");
+            System.out.println(foo.getBar());
+        };
     }
 }
