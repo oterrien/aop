@@ -14,6 +14,6 @@ public class OnUpdateNotifier {
 
     @After("@annotation(com.ote.test.OnUpdate)")
     public void after() throws Throwable {
-        System.out.println("after onUpdate");
+        System.out.println("#OnUpdateNotifier : after onUpdate");
     }
 }

@@ -8,6 +8,7 @@ public class Application {
 
 
     public static void main(String... args) {
+
         System.out.println(new Foo().power(2, 4));
 
         User user = new User();
