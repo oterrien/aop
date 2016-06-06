@@ -1,4 +1,3 @@
 # aop
 
-Cf branch master
-Cf branch with-spring
+Cf branch master & branch with-spring
