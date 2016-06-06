@@ -1,7 +1,5 @@
 package com.ote.test;
 
-import lombok.Getter;
-
 public class Foo {
 
     private String bar;
@@ -10,6 +8,7 @@ public class Foo {
         return bar;
     }
 
+    @Loggable
     @Trigger(method = "triggered")
     public void setBar(String bar) {
         this.bar = bar;
@@ -23,5 +22,4 @@ public class Foo {
     private void triggered() {
         System.out.println("TRIGGERED");
     }
-
 }
