@@ -11,8 +11,8 @@ import java.lang.reflect.Method;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@Component
 @Aspect
+@Component
 public class LoggerAspect {
 
     @Around("execution(* *(..)) && @annotation(com.ote.test.Loggable)")
