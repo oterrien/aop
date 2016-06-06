@@ -14,7 +14,7 @@ public class MethodLogger {
     public Object around(ProceedingJoinPoint point) throws Throwable {
         long start = System.currentTimeMillis();
         Object result = point.proceed();
-        System.out.printf("#%s(%s): %s in %sms\n", point.getSignature().getName(), Stream.of(point.getArgs()).collect(Collectors.toList()), result, System.currentTimeMillis() - start);
+        //System.out.printf("#%s(%s): %s in %sms\n", point.getSignature().getName(), Stream.of(point.getArgs()).collect(Collectors.toList()), result, System.currentTimeMillis() - start);
         return result;
     }
 }

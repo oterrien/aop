@@ -96,6 +96,7 @@
                         </source>
                     </sources>
                     <showWeaveInfo>true</showWeaveInfo>
+                    <forceAjcCompile>false</forceAjcCompile>
                 </configuration>
                 <executions>
                     <execution>
